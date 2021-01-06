@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.0'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'io.springfox:springfox-swagger2:2.9.2'
+	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+	compile 'org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE'
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.postgresql:postgresql'
+
+}
+
+//runtimeOnly 'mysql:mysql-connector-java'
+//spring.jpa.hibernate.ddl-auto=update
+//spring.datasource.url=jdbc:mysql://127.0.0.1:3306/db-example
+//spring.datasource.username=root
+//spring.datasource.password=
+
+//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+//	runtimeOnly 'com.h2database:h2'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testCompile 'junit:junit:4.13'
+//	compile 'io.springfox:springfox-swagger2:2.9.2'
+//	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+//	compile 'org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE'
